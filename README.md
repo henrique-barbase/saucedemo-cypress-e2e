@@ -3,7 +3,7 @@
 [![Cypress](https://img.shields.io/badge/Cypress-E2E-blue)](https://www.cypress.io/)  
 [![License: MIT](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
-Automação de testes **E2E** do [SauceDemo](https://www.saucedemo.com/) usando **Cypress** e **App Actions**.
+Automação de testes **E2E** do [SauceDemo](https://www.saucedemo.com/) usando **Cypress**
 
 ---
 
