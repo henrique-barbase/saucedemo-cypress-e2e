@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-10-01T18:42:27.450Z",
+    "end": "2025-10-01T18:42:29.721Z",
+    "duration": 2271,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4fdc48dd-35dc-4d37-bb94-6e596cedb3ff",
+      "title": "",
+      "fullFile": "cypress\\e2e\\checkout.cy.js",
+      "file": "cypress\\e2e\\checkout.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9efe8e5f-4fb2-4ba0-ab15-9da907602d83",
+          "title": "Checkout",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve adicionar um produto ao carrinho e finalizar a compra",
+              "fullTitle": "Checkout Deve adicionar um produto ao carrinho e finalizar a compra",
+              "timedOut": null,
+              "duration": 2210,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Adicionar produto ao carrinho\ncy.get('[data-test=\"add-to-cart-sauce-labs-backpack\"]').click();\ncy.get('.shopping_cart_link').click();\n// Ir para checkout\ncy.get('[data-test=\"checkout\"]').click();\n// Preencher informações do checkout\ncy.get('[data-test=\"firstName\"]').type('Henrique');\ncy.get('[data-test=\"lastName\"]').type('Sousa');\ncy.get('[data-test=\"postalCode\"]').type('12345');\ncy.get('[data-test=\"continue\"]').click();\n// Finalizar compra\ncy.get('[data-test=\"finish\"]').click();\n// Verificar mensagem de confirmação de pedido de forma robusta\ncy.get('.complete-header').should('be.visible').and('contain.text', 'Thank you for your order'); // sem se preocupar com maiúsculas ou pontuação final",
+              "err": {},
+              "uuid": "6ee5aa91-e110-4610-93f6-50199f2124bc",
+              "parentUUID": "9efe8e5f-4fb2-4ba0-ab15-9da907602d83",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6ee5aa91-e110-4610-93f6-50199f2124bc"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2210,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.0"
+    }
+  }
+}
